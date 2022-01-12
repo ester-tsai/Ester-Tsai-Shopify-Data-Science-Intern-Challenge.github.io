@@ -42,7 +42,7 @@ WHERE EmployeeID IN
 ### (c) What product was ordered the most by customers in Germany?
 ANSWER: Boston Crab Meat
 
-Logic: The product that was ordered the most by customers in Germany has a ProductID of 40, so I will identify the product with a ProductID of 40.
+Logic: The product that was ordered the most (i.e. largest total quantity) by customers in Germany has a ProductID of 40, so I will identify the product with a ProductID of 40.
 
 ```markdown
 SELECT ProductName FROM Products 
