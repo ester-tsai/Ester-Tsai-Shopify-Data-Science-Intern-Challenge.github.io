@@ -1,14 +1,52 @@
-## Welcome to GitHub Pages
+## Question 1:
 
-You can use the [editor on GitHub](https://github.com/ester-tsai/Ester-Tsai-Shopify-Data-Science-Intern-Challenge.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Please have a look at this [Jupyter Notebook PDF.](https://drive.google.com/file/d/162sqjfWvnPuxHzr4VQpuCmFcwgcoxBQF/view?usp=sharing)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Question 2:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### (a) How many orders were shipped by Speedy Express in total?
+ANSWER: 54
+
 
 ```markdown
+
+
+```
+
+### (b) What is the last name of the employee with the most orders?
+ANSWER: Peacock
+
+
+
+### (c) What product was ordered the most by customers in Germany?
+ANSWER: Boston Crab Meat
+
+```markdown
+SELECT ProductName FROM Products 
+WHERE ProductID IN
+(SELECT ProductID FROM Orders
+LEFT JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
+LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+WHERE Country = 'Germany' 
+GROUP BY ProductID
+ORDER BY SUM(Quantity) DESC 
+LIMIT 1);
+```
+
+
+
+
+
+
+
+
+
+```markdown
+
+
+
 Syntax highlighted code block
 
 # Header 1
