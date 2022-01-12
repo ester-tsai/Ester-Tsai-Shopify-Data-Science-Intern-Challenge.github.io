@@ -6,6 +6,7 @@ Please have a look at this [Jupyter Notebook PDF.](Ester Tsai Shopify Summer 202
 
 ## Question 2:
 
+
 ### (a) How many orders were shipped by Speedy Express in total?
 ANSWER: 54
 
@@ -19,6 +20,7 @@ WHERE ShipperID IN
 ```
 
 <img src="a1.PNG?raw=true"/>
+
 
 ### (b) What is the last name of the employee with the most orders?
 ANSWER: Peacock
@@ -35,6 +37,7 @@ WHERE EmployeeID IN
 ```
 
 <img src="b1.PNG?raw=true"/>
+
 
 ### (c) What product was ordered the most by customers in Germany?
 ANSWER: Boston Crab Meat
@@ -58,5 +61,6 @@ WHERE ProductID IN
 --------
 
 Applicant: Ester Tsai
+
 Email: tsaiester@gmail.com
 
