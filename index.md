@@ -1,6 +1,6 @@
 ## Question 1:
 
-Please have a look at this [Jupyter Notebook PDF.](https://drive.google.com/file/d/162sqjfWvnPuxHzr4VQpuCmFcwgcoxBQF/view?usp=sharing)
+Please have a look at this [Jupyter Notebook PDF.](Ester Tsai Shopify Summer 2022 Data Science Intern Challenge Q1.pdf)
 
 ## Question 2:
 
@@ -8,7 +8,7 @@ Please have a look at this [Jupyter Notebook PDF.](https://drive.google.com/file
 ANSWER: 54
 
 ```markdown
-SELECT COUNT(\*) FROM Orders
+SELECT COUNT(*) FROM Orders
 WHERE ShipperID IN
 ( SELECT ShipperID FROM Shippers
   WHERE ShipperName = 'Speedy Express');
