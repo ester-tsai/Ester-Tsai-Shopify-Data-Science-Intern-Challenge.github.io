@@ -2,23 +2,30 @@
 
 Please have a look at this [Jupyter Notebook PDF.](https://drive.google.com/file/d/162sqjfWvnPuxHzr4VQpuCmFcwgcoxBQF/view?usp=sharing)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 ## Question 2:
 
 ### (a) How many orders were shipped by Speedy Express in total?
 ANSWER: 54
 
-
 ```markdown
-
-
+SELECT COUNT(*) FROM Orders
+WHERE ShipperID IN
+( SELECT ShipperID FROM Shippers
+  WHERE ShipperName = 'Speedy Express');
 ```
+
 
 ### (b) What is the last name of the employee with the most orders?
 ANSWER: Peacock
 
-
+```markdown
+SELECT LastName FROM Employees
+WHERE EmployeeID IN 
+( SELECT EmployeeID FROM Orders
+  GROUP BY EmployeeID
+  ORDER BY COUNT(*) DESC
+  LIMIT 1);
+```
 
 ### (c) What product was ordered the most by customers in Germany?
 ANSWER: Boston Crab Meat
@@ -26,13 +33,13 @@ ANSWER: Boston Crab Meat
 ```markdown
 SELECT ProductName FROM Products 
 WHERE ProductID IN
-(SELECT ProductID FROM Orders
-LEFT JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
-LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID
-WHERE Country = 'Germany' 
-GROUP BY ProductID
-ORDER BY SUM(Quantity) DESC 
-LIMIT 1);
+( SELECT ProductID FROM Orders
+  LEFT JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
+  LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+  WHERE Country = 'Germany' 
+  GROUP BY ProductID
+  ORDER BY SUM(Quantity) DESC 
+  LIMIT 1);
 ```
 
 
