@@ -14,6 +14,7 @@ WHERE ShipperID IN
   WHERE ShipperName = 'Speedy Express');
 ```
 
+<img src="a1.PNG?raw=true"/>
 
 ### (b) What is the last name of the employee with the most orders?
 ANSWER: Peacock
@@ -26,6 +27,8 @@ WHERE EmployeeID IN
   ORDER BY COUNT(*) DESC
   LIMIT 1);
 ```
+
+<img src="b1.PNG?raw=true"/>
 
 ### (c) What product was ordered the most by customers in Germany?
 ANSWER: Boston Crab Meat
@@ -42,41 +45,6 @@ WHERE ProductID IN
   LIMIT 1);
 ```
 
+<img src="c1.PNG?raw=true"/>
 
 
-
-
-
-
-
-
-```markdown
-
-
-
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ester-tsai/Ester-Tsai-Shopify-Data-Science-Intern-Challenge.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
