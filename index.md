@@ -10,7 +10,9 @@ Please have a look at this [Jupyter Notebook PDF.](Ester Tsai Shopify Summer 202
 ### (a) How many orders were shipped by Speedy Express in total?
 ANSWER: 54
 
-Logic: Speedy Express has a ShipperID of 1, so I will calculate the total number of orders from the shipper with a ShipperID of 1.
+Logic: 
+1. Find Speedy Express's ShipperID. Speedy Express has a ShipperID of 1.
+2. Calculate the total number of orders from the shipper with a ShipperID of 1.
 
 ```markdown
 SELECT COUNT(*) FROM Orders
@@ -25,7 +27,9 @@ WHERE ShipperID IN
 ### (b) What is the last name of the employee with the most orders?
 ANSWER: Peacock
 
-Logic: The employee with the most orders has an EmployeeID of 4, so I will identify the last name of the employee with an EmployeeID of 4.
+Logic: 
+1. Identify the employee with the most orders. The employee with the most orders has an EmployeeID of 4.
+2. Find the last name of the employee with an EmployeeID of 4.
 
 ```markdown
 SELECT LastName FROM Employees
@@ -42,7 +46,9 @@ WHERE EmployeeID IN
 ### (c) What product was ordered the most by customers in Germany?
 ANSWER: Boston Crab Meat
 
-Logic: The product that was ordered the most (i.e. largest total quantity) by customers in Germany has a ProductID of 40, so I will identify the product with a ProductID of 40.
+Logic: 
+1. Identify the product that was ordered the most (i.e. largest total quantity) by customers in Germany. The product has a ProductID of 40.
+2. Find the name of the product with a ProductID of 40.
 
 ```markdown
 SELECT ProductName FROM Products 
