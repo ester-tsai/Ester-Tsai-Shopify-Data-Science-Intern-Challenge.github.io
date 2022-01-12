@@ -8,7 +8,7 @@ Please have a look at this [Jupyter Notebook PDF.](https://drive.google.com/file
 ANSWER: 54
 
 ```markdown
-SELECT COUNT(*) FROM Orders
+SELECT COUNT(\*) FROM Orders
 WHERE ShipperID IN
 ( SELECT ShipperID FROM Shippers
   WHERE ShipperName = 'Speedy Express');
