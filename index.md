@@ -2,6 +2,8 @@
 
 Please have a look at this [Jupyter Notebook PDF.](Ester Tsai Shopify Summer 2022 Data Science Intern Challenge Q1.pdf)
 
+--------
+
 ## Question 2:
 
 ### (a) How many orders were shipped by Speedy Express in total?
@@ -50,4 +52,8 @@ WHERE ProductID IN
 
 <img src="c1.PNG?raw=true"/>
 
+--------
+
+Applicant: Ester Tsai
+Email: tsaiester@gmail.com
 
